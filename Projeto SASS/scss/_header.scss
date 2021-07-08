@@ -1,0 +1,72 @@
+.header{
+    font-family: Arial, Helvetica, sans-serif;
+
+    &__logo{
+        text-align: center;
+    }
+
+    &__img{
+        max-width: 350px;
+        @include forPhone{
+            max-width: 250px;
+        }    
+    }
+
+    .menu{
+        &__list{
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid $lightGray;
+            border-bottom: 1px solid $lightGray;
+            margin: 0 auto;
+
+            @include forPhone{
+                width: 90%;
+                padding: 15px 0;
+                flex-wrap: wrap;
+            }
+            @include forTablet{
+                width: 80%;
+                padding: 25px 0;
+            }
+            @include forDesktop{
+                width: 80%;
+                padding: 20px 0;
+            }
+        }
+
+        &__links{
+            position: relative;
+            @include forPhone{
+                padding: 5px 25px;
+            }
+            @include forTablet{
+                padding: 0 25px;
+            }
+            @include forDesktop{
+                padding: 0 25px;
+            }
+
+            &:not(:last-child):after{
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -3px;
+                margin: auto;
+                height: 15px;
+                width: 1px;
+                background-color: $lightGray;
+            }
+        }
+
+        &__link{
+            color: $darkGray;
+
+            &:hover{
+                color: $purple;
+            }
+        }
+              
+    }
+}

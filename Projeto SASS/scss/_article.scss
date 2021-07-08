@@ -1,0 +1,75 @@
+.article{
+    width: 80%;
+    margin: 0 auto 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    @include forPhone{
+        width: 100%;
+    }
+
+    &__title{
+        background-color: $lightGray;
+        text-align: center;
+        padding: 20px;
+    }
+
+    &__h1{
+        @include fontSize(22px);
+        color: $darkGray;
+        letter-spacing: 1px;
+        margin: 5px 0 10px 0;
+    }
+
+    .breadcrumb{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__link{
+            text-decoration: none;
+            @include fontSize(12px);
+            color: $darkGray;
+
+            &:hover{
+                text-decoration: underline;
+                color: $purple;
+            }
+        }
+
+        &__img{
+            width: 20px;
+            margin: 8px;
+        }
+    }
+
+    &__img{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    &__details{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__date{
+        margin: 0 10px;
+        @include fontSize(12px);
+        font-style: italic;
+    }
+
+    &__tag{
+        @include fontSize(14px);
+        padding: 5px 7px;
+        color: $purple;
+        border: 1px solid $purple;
+        margin: 0 10px;
+    }
+
+    &__content{
+        font-weight: 100;
+        @include fontSize(14px);
+        color: $darkGray;
+        padding: 10px 20px;
+    }
+}

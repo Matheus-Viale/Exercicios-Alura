@@ -1,0 +1,41 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @extend %double-margin-top;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  @include forPhone {
+    flex-direction: column;
+  }
+
+  &__figure {
+    width: 50%;
+    @include forPhone {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__info {
+    width: 40%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    @include forPhone {
+      width: 100%;
+    }
+  }
+
+  $x: 1;
+  @while $x<5 {
+    &__p-#{$x} {
+      @include fontSize(46px / $x);
+      padding-top: 5px * $x;
+    }
+    $x: $x + 1;
+  }
+}

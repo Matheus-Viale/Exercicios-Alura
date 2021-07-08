@@ -1,0 +1,95 @@
+.about{
+    width: 80%;
+    margin: 0 auto 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    @include forPhone{
+        width: 100%;
+    }
+
+    &__title{
+        background-color: $lightGray;
+        text-align: center;
+        padding: 20px;
+    }
+
+    &__h1{
+        @include fontSize(22px);
+        color: $darkGray;
+        letter-spacing: 1px;
+        margin: 5px 0 10px 0;
+    }
+
+    .breadcrumb{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__link{
+            text-decoration: none;
+            @include fontSize(12px);
+            color: $darkGray;
+
+            &:hover{
+                text-decoration: underline;
+                color: $purple;
+            }
+        }
+
+        &__img{
+            width: 20px;
+            margin: 8px;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__intro{
+        font-weight: 100;
+        color: $darkGray;
+        width: 70%;
+        margin: 30px auto;
+        text-align: center;
+        @include fontSize(16px);
+
+        @include forPhone{
+            width: 90%;
+            text-align: initial;
+        }
+    }
+
+    &__split{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        @include forPhone{
+            display: block;
+        }
+    }
+
+    &__img-description{
+        width: $imgWidth;
+        @include forPhone{
+            width: 100%;
+        }
+    }
+
+    &__txt{
+        width: calc(100% - #{$imgWidth});
+        @include forPhone{
+            width: 100%;
+        }
+    }
+
+    &__p{
+        @include fontSize(14px);
+        padding: 10px 20px;
+        color: $darkGray;
+        @include forPhone{
+            @include fontSize(16px);
+        }
+    }
+}

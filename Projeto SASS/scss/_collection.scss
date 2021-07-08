@@ -1,0 +1,133 @@
+$half-width: 50%;
+$full-width: 100%;
+
+@mixin theme-collection($half-post: true) {
+    @include forPhone{
+        width: $full-width;
+        @include fontSize(16px);
+    }
+    @if $half-post{
+        width: $half-width;
+        @include fontSize(18px);
+    } @else {
+        width: $full-width;
+        @include fontSize(22px);
+    }
+
+    
+}
+
+.collection {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   width: 80%;
+   margin-left: auto;
+   margin-right: auto;
+   font-family: Arial;
+   @include forPhone {   
+       width: 90%;
+   }
+
+   &__post {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+       @include theme-collection($half-post: false);
+
+       &.half{
+           @include theme-collection($half-post: true);
+       }
+   }
+
+   &__figure {
+       width: 50%;
+   }
+
+   &__img {
+       width: 100%;
+   }
+
+   &__about {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+       width: 50%;
+       text-align: center;
+   }
+
+   &__title {
+       color: $darkGray;
+       text-decoration: unset;
+       letter-spacing: 1px;
+       width: 100%;
+       margin: 10px 0;
+
+       &:hover {
+           color: $purple;
+           text-decoration: underline;
+       }
+   }
+
+   &__date {
+       @extend %no-margin-top, %no-margin-bottom, %default-margin-left, %default-margin-right;
+       @include fontSize(12px);
+       font-style: italic;
+       width: 20%;
+       @include forPhone {
+           @include fontSize(10px);
+       }
+       @include forTablet {   
+           width: 30%;
+       }
+   }
+
+   &__tag {
+       @include fontSize(14px);
+       width: 50px;
+       padding: 5px 7px;
+       color: $purple;
+       border: 1px solid $purple;
+       @extend %no-margin-top, %no-margin-bottom, %default-margin-left, %default-margin-right;
+       @include forPhone {   
+           width: 30px;
+           @include fontSize(12px);
+       }
+       @include forTablet {   
+           width: 35px;
+           @include fontSize(12px);
+       }
+   }
+
+   &__breadcrumb {
+       background-color: $lightGray;
+       text-align: center;
+       padding: 30px;
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .breadcrumb {
+       &__link {
+           @include fontSize(18px);
+           text-decoration: unset;
+           color: $darkGray;
+           letter-spacing: 1px;
+
+           &:hover {
+               color: $purple;
+               text-decoration: underline;
+           }
+       }
+
+       &__img {
+           width: 14px;
+           margin: 10px;
+       }
+   }
+}
