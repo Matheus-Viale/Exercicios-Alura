@@ -1,0 +1,53 @@
+.imagem-carrossel-um {
+  object-fit: cover;
+  object-position: 0 80%;
+  height: 400px;
+}
+
+.imagem-carrossel-dois {
+  object-fit: cover;
+  height: 400px;
+}
+
+.carousel-item {
+  transition: transform 2s ease, opacity 0.5s ease-out;
+}
+
+.fonte-pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+.width-card {
+  max-width: 18rem;
+}
+
+.cor-txts {
+  color: darkred;
+}
+
+#cor-titulo {
+  color: darkred;
+}
+
+.cor-btn {
+  background-color: darkred;
+}
+
+.cor-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: darkred;
+}
+
+.cor-borda {
+  border-color: darkred;
+}
+
+.img-card-height {
+  object-fit: cover;
+  height: 250px;
+}
+
+.section-cards {
+  background-color: #ededed;
+}
