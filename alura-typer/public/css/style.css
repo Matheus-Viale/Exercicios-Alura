@@ -1,0 +1,85 @@
+body {
+  overflow: scroll;
+}
+
+.cabecalho-corpo {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.frase {
+  text-align: left;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.corpo-typer {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.estilo-typer {
+  border: 1px solid black;
+  height: 200px;
+  resize: none;
+}
+
+.estilo-typer-correct {
+  border: 3px solid green;
+}
+
+.estilo-typer-wrong {
+  border: 3px solid red;
+}
+
+.estilo-typer-desabilitado {
+  background-color: lightgray;
+  border: 1px solid darkred;
+}
+
+.estilo-typer-concluido {
+  background-color: lightgray;
+  border: 1px solid darkgreen;
+}
+
+.icones {
+  vertical-align: middle;
+}
+
+#btn-remover {
+  cursor: pointer;
+}
+
+.placar {
+  display: none;
+}
+
+#erro {
+  color: red;
+  display: none;
+}
+
+#spinner {
+  display: none;
+}
+
+#busca-frase {
+  width: 40px;
+}
+
+#botao-sync {
+  float: right;
+}
+
+#sucess {
+  color: darkgreen;
+  display: none;
+}
+
+.select-usuarios {
+  display: inline-block;
+  min-width: 300px;
+}
