@@ -1,0 +1,127 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.footer {
+  padding-top: 1rem;
+  background-color: $footer;
+  a {
+    &:hover {
+      transition-duration: 500ms;
+    }
+  }
+}
+
+.contact-box {
+  position: relative;
+
+  &__icon {
+    width: 2rem;
+    stroke: $primary;
+    padding-top: 0.5rem;
+    @include media-breakpoint-up(sm) {
+      width: 4rem;
+    }
+  }
+
+  &__info {
+    padding: 0.4rem;
+    font-weight: 600;
+    &--title {
+      color: $white;
+      text-decoration: none;
+      font-size: 1rem;
+      @include media-breakpoint-up(sm) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &--subtitle {
+      color: $gray-600;
+      text-decoration: none;
+      font-size: 0.8rem;
+      @include media-breakpoint-up(sm) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.footer-social {
+  background-color: $gray-900;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 3rem;
+  align-items: center;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    margin: 0 0;
+    border-radius: 0;
+  }
+  a {
+    color: $white;
+    i {
+      font-size: 1rem;
+      margin-left: 1rem;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 1.7rem;
+      }
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.company-list {
+  display: block;
+  list-style-type: none;
+  position: relative;
+
+  li {
+    text-decoration: none;
+    a {
+      color: $white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  background-color: $black;
+
+  &__copyright {
+    color: $gray-600;
+    font-weight: 400;
+
+    a {
+      color: $gray-300;
+      text-decoration: none;
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+
+  i {
+    color: $white;
+    font-size: 1rem;
+    @include absoluteCenter;
+  }
+}
